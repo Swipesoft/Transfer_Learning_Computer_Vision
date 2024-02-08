@@ -115,9 +115,6 @@ def hymenoptera_model (image_shape=IMG_SIZE, data_augmentation=data_augumenter()
     #apply data augmentation to the input
     x = data_augumenter()(inputs)
 
-    #data preprocessing using the same weights the model was trained on
-    #x = preprocess_input(x)
-
     #set training to False to avoid keeping track of statistics in the batch
     x = base_model(x, training=False)
 
